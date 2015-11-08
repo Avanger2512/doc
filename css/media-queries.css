@@ -1,0 +1,133 @@
+
+
+@media (min-width: 650px) and (max-width: 960px) {
+  #request-dialog .modal-dialog {
+    max-height: 100%;
+    overflow: visible;
+  }
+  .modal-left-side {
+    position: relative;
+    display: block;
+    left: auto;
+    top: auto;
+    width: auto;
+    border-radius: 3px 3px 0 0;
+    -webkit-background-size: cover;
+     background-size: cover; }
+  .modal .modal-right-side {
+    padding-left: 0px;
+    border-radius: 0 0 3px 3px;
+     }
+  .modal-right-side {
+    height: 100%;
+  }
+  .col-sm-6 {
+    width: 50%;
+    float: left;
+  }
+
+  .modal-right-header .modal-icon {
+    padding-left: 22px;
+  }
+  .side-section-header .btn-border {
+    display: inline-block;
+    width: 170px;
+    margin-left: 15px;
+  }
+  .section__radio label {
+    display: block;
+  }
+  .side-section-header .icon-info {
+    right: auto;
+    left: 140px;
+  }
+  }
+
+@media (min-width: 300px) and (max-width: 650px) {
+  #request-dialog .modal-dialog {
+    max-height: 100%;
+    overflow: visible;
+  }
+
+  .modal-left-side {
+    position: relative;
+    display: block;
+    left: auto;
+    top: auto;
+    width: auto;
+    border-radius: 3px 3px 0 0;
+    -webkit-background-size: cover;
+     background-size: cover; }
+  .modal .modal-right-side {
+    padding-left: 0px;
+    border-radius: 0 0 3px 3px;
+     }
+  .modal-right-side {
+    height: 100%;
+  }
+  .logo {
+    display: none;
+  }
+  .modal-left-side .modal-header {
+    padding: 25px 60px 15px;
+    margin: 0;
+    min-height: auto;
+    text-align: left;
+  }
+  textarea.modal-form-input {
+    margin-top: 20px;
+    height: 33px;
+    overflow: visible;
+    padding-top: 5px;
+    padding-bottom: 0;
+  }
+  .modal-form-footer p {
+    margin-bottom: 20px;
+  }
+  .modal-right-header h3, .modal-header h2, .modal-right-content h3 {
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  .modal-right-content h3 {
+    margin: 0;
+  }
+  .js-btn-info {
+    padding-left: 25px;
+  }
+  .modal-right-header h3, .modal-right-content h3 {
+    color: #5e6e71;
+  }
+  .modal-right-header {
+    margin-bottom: 0;
+    margin: 12px 0;
+
+  }
+  .line {
+    margin: 4px 0;
+    display: none;
+  }
+  .modal-calendar, .js-content-hide, .modal-time {
+    display: none;
+  }
+  .clients_icon, .record_icon  {
+    display: block;
+  }
+  .js-content-hide {
+    margin-top: 10px;
+  }
+  .mobile-border {
+    border-bottom: 1px solid rgba(43, 43, 43, 0.06);
+    padding-bottom: 20px;
+  }
+  .modal-header:after {
+    width: 18px;
+  }
+  .tab-close, .tab-close__calendar,.tab-close__time  {
+    display: block;
+  }
+
+
+}
+
+/*# sourceMappingURL=main.css.map */

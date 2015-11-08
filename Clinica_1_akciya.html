@@ -1,0 +1,349 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="http://new.html.dev.doc.ua/doc.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/media-queries.css">
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+		<!-- Add your site or application content here -->
+        <div class="container-fluid">
+        	<div class="row">
+        		<div class="container main-content">
+        			<div class="col-sm-12 static-page">
+        				<a href="#request-dialog" data-toggle="modal" title="" class="btn btn-success pull-right">Записаться на прием</a>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <section class="modals">
+        	<div id="request-dialog" aria-hidden="true" role="dialog" tabindex="-1" class="modal fade request">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<form action="#">
+							<div class="modal-left-side">
+								<div class="side-section modal-header">
+									<img src="img/popup-logo.png" alt="" class="logo">
+									<h2>Запись на прием в клинику</h2>
+									<div class="modal-icon record_icon record_icon-clinica"></div>
+								</div>
+								<div class="side-section">
+									<div class="modal-icon icon-clinic"></div>
+									<div class="side-section-main">
+										<div class="side-section-header">
+											<h3>Савмед, клиника
+												ортопедо-травматологии
+												и вертебрологии (Дневной
+												стационар болезней
+												позвоночника и суставов)</h3>
+										</div>
+									</div>
+								</div>
+								<div class="side-section">
+									<div class="modal-icon icon-location"></div>
+										<div class="side-section-main">
+											<div class="side-section-header">
+												<h3>ул. Раисы Окипной, 8б, 4-й этаж (м. Левобережная)</h3>
+											</div>
+										</div>
+									</div>
+								<div class="side-section">
+									<div class="modal-icon icon-coupon"></div>
+									<div class="side-section-main">
+										<div class="side-section-header">
+											<h3>Комплексное аудиологическое обследование для взрослых и детей от центра слуха «Беттерон»</h3>
+										</div>
+									</div>
+								</div>
+								<div class="side-section">
+									<div class="modal-icon icon-wallet"></div>
+									<div class="side-section-main">
+										<div class="side-section-header">
+											<h3>Стоимость 2000грн.</h3>
+											<i class="modal-icon icon-info" data-dialog="#payment-total"></i>
+										</div>
+										<div class="side-section-content" style="height: 162px; height: 0;">
+											<div class="side-section-content-inner">
+												<ul class="price-list">
+													<li class="list-item">
+														<input type="radio" name="radio-var" id="radio-4_1" class="hidden">
+														<label for="radio-4_1">Узи желчного пузыря с определением...</label>
+														<div class="modal-list-price">225грн</div>
+														<div class="remove-item"></div>
+													</li>
+													<li class="list-item">
+														<input type="checkbox" name="radio-var" id="radio-4_2" class="hidden">
+														<label for="radio-4_2">Узи желчного пузыря с определением...</label>
+														<div class="modal-list-price">225грн</div>
+														<div class="remove-item"></div>
+													</li>
+													<li class="list-item">
+														<input type="radio" name="radio-var" id="radio-4_1" class="hidden">
+														<label for="radio-4_1">Узи желчного пузыря с определением...</label>
+														<div class="modal-list-price">225грн</div>
+														<div class="remove-item"></div>
+													</li>
+													<li class="list-item">
+														<input type="checkbox" name="radio-var" id="radio-4_2" class="hidden">
+														<label for="radio-4_2">Узи желчного пузыря с определением...</label>
+														<div class="modal-list-price">225грн</div>
+														<div class="remove-item"></div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal-right-side">
+								<div class="modal-right-content">
+									<div class="modal-icon clients_icon"></div>
+									<h3 class="js-btn-info mobile-border">Информация о пациенте</h3>
+									<div class="tab-close"></div>
+									<div class="row js-content-hide">
+										<div class="col-sm-6">
+											<div class="row">
+												<div class="col-sm-12">
+													<input type="text" class="modal-form-input" placeholder="Имя, фамилия*">
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-12">
+													<input type="text" class="modal-form-input phone-input-mask" placeholder="Телефон*">
+												</div>
+											</div>
+											<div class="row margin-bottom-0">
+												<div class="col-sm-12">
+													<input type="text" class="modal-form-input" placeholder="E-mail">
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<textarea name="" id="" cols="30" rows="10" class="modal-form-input" placeholder="Комментарий"></textarea>
+										</div>
+									</div>
+									<span class="js-content-hide">
+									<input type="checkbox" name="" id="checkbox-1" class="modal-checkbox"><label for="checkbox-1">Врач для ребенка</label>
+									<input type="checkbox" name="" id="checkbox-2" class="modal-checkbox" checked="checked"><label for="checkbox-2">Выезд на дом</label>
+									</span>
+									<div class="line"></div>
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="modal-right-header mobile-border">
+												<div class="modal-icon icon-calendar"></div><h3 class="js-btn-cal">Желаемая дата приема</h3>
+												<div class="tab-close__calendar"></div>
+											</div>
+											<div class="modal-calendar">
+												<input type="text" name="" id="modal-calendar" aria-haspopup="false">
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="modal-right-header mobile-border">
+												<div class="modal-icon icon-clock"></div><h3 class="js-btn-time">Желаемое время приема</h3>
+												<div class="tab-close__time"></div>
+											</div>
+											<div class="modal-time">
+												<table class="modal-time-header">
+													<tr>
+														<th><a href="#" data-group="1">Утро</a></th>
+														<th><a href="#" data-group="2">Обед</a></th>
+														<th><a href="#" data-group="3">Вечер</a></th>
+													</tr>
+												</table>
+												<div class="modal-time-groups">
+													<div class="modal-time-cell">
+														<input type="checkbox" name="time" id="time-0700" value="7am" class="modal-checkbox" data-group-id="1">
+														<label for="time-0700">07:00</label>
+													</div>
+													<div class="modal-time-cell">
+														<input type="checkbox" name="time" id="time-0800" value="8am" class="modal-checkbox" data-group-id="1">
+														<label for="time-0800">08:00</label>
+													</div>
+													<div class="modal-time-cell">
+														<input type="checkbox" name="time" id="time-0900" value="9am" class="modal-checkbox" data-group-id="1">
+														<label for="time-0900">09:00</label>
+													</div>
+													<div class="modal-time-cell">
+														<input type="checkbox" name="time" id="time-1000" value="10am" class="modal-checkbox" data-group-id="1">
+														<label for="time-1000">10:00</label>
+													</div>
+													<div class="modal-time-cell">
+														<input type="checkbox" name="time" id="time-1100" value="11am" class="modal-checkbox" data-group-id="1">
+														<label for="time-1100">11:00</label>
+													</div>
+													<div class="modal-time-cell">
+														<input type="checkbox" name="time" id="time-1200" value="12am" class="modal-checkbox" data-group-id="2">
+														<label for="time-1200">12:00</label>
+													</div>
+													<div class="modal-time-cell">
+														<input type="checkbox" name="time" id="time-1300" value="1pm" class="modal-checkbox" data-group-id="2">
+														<label for="time-1300">13:00</label>
+													</div>
+													<div class="modal-time-cell">
+														<input type="checkbox" name="time" id="time-1400" value="2pm" class="modal-checkbox" data-group-id="2">
+														<label for="time-1400">14:00</label>
+													</div>
+													<div class="modal-time-cell">
+														<input type="checkbox" name="time" id="time-1500" value="3pm" class="modal-checkbox" data-group-id="2">
+														<label for="time-1500">15:00</label>
+													</div>
+													<div class="modal-time-cell">
+														<input type="checkbox" name="time" id="time-1600" value="4pm" class="modal-checkbox" data-group-id="2">
+														<label for="time-1600">16:00</label>
+													</div>
+													<div class="modal-time-cell">
+														<input type="checkbox" name="time" id="time-1700" value="5pm" class="modal-checkbox" data-group-id="3">
+														<label for="time-1700">17:00</label>
+													</div>
+													<div class="modal-time-cell">
+														<input type="checkbox" name="time" id="time-1800" value="6pm" class="modal-checkbox" data-group-id="3">
+														<label for="time-1800">18:00</label>
+													</div>
+													<div class="modal-time-cell">
+														<input type="checkbox" name="time" id="time-1900" value="7pm" class="modal-checkbox" data-group-id="3" disabled>
+														<label for="time-1900">19:00</label>
+													</div>
+													<div class="modal-time-cell">
+														<input type="checkbox" name="time" id="time-2000" value="8pm" class="modal-checkbox" data-group-id="3" disabled>
+														<label for="time-2000">20:00</label>
+													</div>
+													<div class="modal-time-cell">
+														<input type="checkbox" name="time" id="time-2100" value="9pm" class="modal-checkbox" data-group-id="3" disabled>
+														<label for="time-2100">21:00</label>
+													</div>
+													<div class="modal-time-cell">
+														<input type="checkbox" name="time" id="time-2200" value="10pm" class="modal-checkbox" data-group-id="3" disabled>
+														<label for="time-2200">22:00</label>
+													</div>
+												</div>
+												<div class="line"></div>
+												<div class="modal-time-footer">
+													<input type="checkbox" name="" id="checkbox-3" class="modal-checkbox free-time"><label for="checkbox-3">время неважно</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="modal-form-footer">
+										<div class="row">
+											<div class="col-sm-6">
+												<p>Отправляя заявку, вы принимаете <br>
+												<a href="#">правила работы сервиса</a>.</p>
+											</div>
+											<div class="col-sm-6">
+												<button class="modal-button btn-full btn-green btn-large">Отправить заявку</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+						<div id="dialog-window" class="payment-list">
+							<div class="dialog-close"></div>
+							<div class="dialog-window-content">
+								<div class="select-diagnostic">
+									<h4>УЗИ</h4>
+									<ul>
+										<li class="list-item">
+											<input type="checkbox" name="" id="dignostic-1">
+											<label for="dignostic-1">желчного пузыря с определением функции</label>
+											<div class="right-cell">
+												<div class="price">225грн</div>
+											</div>
+										</li>
+										<li class="list-item">
+											<input type="checkbox" name="" id="dignostic-2">
+											<label for="dignostic-2">лимфатических узлов</label>
+											<div class="right-cell">
+												<div class="old-price">1500грн</div>
+												<div class="price">225грн</div>
+											</div>
+										</li>
+										<li class="list-item">
+											<input type="checkbox" name="" id="dignostic-3">
+											<label for="dignostic-3">желчного пузыря с определением функции</label>
+											<div class="right-cell">
+												<div class="price">225грн</div>
+											</div>
+										</li>
+										<li class="list-item">
+											<input type="checkbox" name="" id="dignostic-4">
+											<label for="dignostic-4">органов брюшной полости и почек</label>
+											<div class="right-cell">
+												<div class="price">225грн</div>
+											</div>
+										</li>
+									</ul>
+									<h4>Дуплексное сканирование</h4>
+									<ul>
+										<li class="list-item">
+											<input type="checkbox" name="" id="dignostic-5">
+											<label for="dignostic-5">артерий верхних конечностей</label>
+											<div class="right-cell">
+												<div class="price">225грн</div>
+											</div>
+										</li>
+										<li class="list-item">
+											<input type="checkbox" name="" id="dignostic-6">
+											<label for="dignostic-6">артерий верхних конечностей и вен верхних конечностей</label>
+											<div class="right-cell">
+												<div class="price">225грн</div>
+											</div>
+										</li>
+										<li class="list-item">
+											<input type="checkbox" name="" id="dignostic-7">
+											<label for="dignostic-7">вен верхних конечностей</label>
+											<div class="right-cell">
+												<div class="price">225грн</div>
+											</div>
+										</li>
+										<li class="list-item">
+											<input type="checkbox" name="" id="dignostic-8">
+											<label for="dignostic-8">вен верхних конечностей</label>
+											<div class="right-cell">
+												<div class="price">225грн</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+							</div>
+							<div class="dialog-footer">
+								<a href="#" class="modal-button btn-green" data-apply-select>Ок</a>
+								<a href="#" class="modal-button btn-dark btn-small" data-clear-select>Очистить выбор</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </section>
+	   <div class="hidden">
+			<div id="close-dialog">
+				<img src="img/logo-big.png" alt="" width="301" height="89">
+				<div class="h1">Вы действительно хотите прервать запись?</div>
+				<div class="h2">Если у вас возникли вопросы, <br>
+					позвоните нам по телефону:<br>
+					(044) 337-07-107 или (067) 123-45-607</div>
+				<img src="img/doc-image.png" alt="" width="140" height="294" class="doc">
+				<a href="#" class="button close-dialog">Прервать</a>
+				<a href="#" class="button return">Продолжить</a>
+			</div>
+	   </div>
+		<script src="http://new.html.dev.doc.ua/doc.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="http://new.html.dev.doc.ua/jquery.mockjax.js"></script>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
