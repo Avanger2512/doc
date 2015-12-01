@@ -23,7 +23,7 @@
         	<div class="row">
         		<div class="container main-content">
         			<div class="col-sm-12 static-page">
-        				<a href="#request-dialog" data-toggle="modal" title="" class="btn btn-success pull-right">Записаться на приемы</a>
+        				<a href="#request-dialog" data-toggle="modal" title="" class="btn btn-success pull-right">Записаться на прием</a>
         			</div>
         		</div>
         	</div>
@@ -33,20 +33,32 @@
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<form action="#">
-							<div class="modal-left-side" >
+							<div class="modal-left-side">
 								<div class="side-section modal-header">
 									<img src="img/popup-logo.png" alt="" class="logo">
-									<h2>Запись на прием в клинику</h2>
+									<h2>Запись на прием к врачу</h2>
 									<div class="modal-icon record_icon record_icon-clinica"></div>
+								</div>
+								<div class="side-section">
+									<div class="modal-doc-userpick">
+										<img src="img/doc-userpick.jpg" alt="" width="35" height="35" class="doc-userpick_picture">
+									</div>
+									<div class="side-section-main">
+										<div class="side-section-header">
+											<h3>Гальчинская - Нестеренко
+											Жанна Владимировна</h3>
+										</div>
+									</div>
 								</div>
 								<div class="side-section">
 									<div class="modal-icon icon-clinic"></div>
 									<div class="side-section-main">
-										<div class="side-section-header section__radio">
-											<h3>Выберите филиал </h3>
-											<input type="radio" name="" id="radio1" class="modal-radio" ><label  for="radio1" class="this-text1">Добробут «Стационар для  взрослых» <span class="radio-text_hide1"> Поликлиника для взрослых</span></label>
-											<input type="radio" name="" id="radio2" class="modal-radio"><label for="radio2" class="this-text2">Добробут «Поликлиника для взрослых на Левом берегу. <span class="radio-text_hide2">Поликлиника для взрослых на»</span></label>
-											<input type="radio" name="" id="radio3" class="modal-radio"><label for="radio3" class="this-text3">Добробут «Стационар для  взрослых» <span class="radio-text_hide3">Поликлиника для взрослых</span></label>
+										<div class="side-section-header">
+											<h3>Савмед, клиника
+												ортопедо-травматологии
+												и вертебрологии (Дневной
+												стационар болезней
+												позвоночника и суставов)</h3>
 										</div>
 									</div>
 								</div>
@@ -58,37 +70,31 @@
 										</div>
 									</div>
 								</div>
-								<div class="side-section js-doctor-text">
-									<div class="modal-icon icon-doc"></div>
+								<div class="side-section">
+									<div class="modal-icon icon-wallet"></div>
 									<div class="side-section-main">
-										<div class="side-section-header">
-											<h3>Специализация врача</h3>
-											<a href="#" class="modal-button btn-border btn-full" data-dialog="#specialization">Измените специальность</a>
-											<div class="side-section__main">
-												<div class="side-section_item"></div>
-											</div>
+										<div class="side-section-header section-header__cost">
+											<h3>Стоимость 2000грн.</h3>
+											<i class="modal-icon icon-info" data-dialog="#payment-total"></i>
 										</div>
-										<div class="side-section-content">
+									</div>
+									<div class="side-section-content">
 											<div class="side-section-content-inner">
-												<ul class="simple-list">
+												<ul>
 													<li class="list-item">
-														<input type="checkbox" name="radio-var" id="radio-1_1" class="hidden">
-														<label for="radio-1_1">Акушер-гинеколог</label>
-														<div class="remove-item"></div>
+														<input type="radio" name="radio-var" id="radio-4_1" class="hidden">
+														<label for="radio-4_1">Узи желчного пузыря с определением...</label>
 													</li>
 												</ul>
 											</div>
 										</div>
-									</div>
 								</div>
-
 							</div>
-
 							<div class="modal-right-side">
 								<div class="modal-right-content">
 									<div class="content-order_footer mobile-border">
 										<div class="modal-icon clients_icon"></div>
-										<h3 class="js-btn-info">Информация о пациенте</h3>
+										<h3 class="js-btn-info ">Информация о пациенте</h3>
 										<div class="tab-close"></div>
 										<div class="mobile-border border-new js-content-hide"></div>
 										<div class="row row-none js-content-hide line-pad">
@@ -230,203 +236,47 @@
 								</div>
 							</div>
 						</form>
-						<div id="dialog-window" data-block="js-doctor-text">
+						<div id="dialog-window" >
 							<div class="dialog-close"></div>
-							<div class="dialog-window-content ">
-								<div class="select-specialization">
-									<div class="col-1-3">
-										<h3 class="letter-title">A</h3>
-										<ul>
-											<li class="list-item">
-												<input type="radio" name="radio-var" id="">
-												<label for="radio-1" data-name="gineco">Акушер-гинеколог!</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="radio-var" id="">
-												<label for="radio-2" data-name="allergo">Аллерголог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="radio-var" id="">
-												<label for="radio-3" data-name="andro">Андролог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="radio-var" id="">
-												<label for="radio-4" data-name="reanim">Анестезиолог-реаниматолог</label>
-											</li>
-										</ul>
-										<h3 class="letter-title">B</h3>
-										<ul>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="vener">Венеролог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="sdsd">Венеролог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="radio-7">
-												<label for="radio-7" data-name="sddf">Венеролог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="radio-8">
-												<label for="radio-8" data-name="dsfsd">Венеролог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="radio-9">
-												<label for="radio-9" data-name="weww">Венеролог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="radio-10">
-												<label for="radio-10" data-name="adasa">Венеролог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="radio-11">
-												<label for="radio-11" data-name="wewe">Венеролог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="radio-12">
-												<label for="radio-12" data-name="sfdd">Венеролог</label>
-											</li>
-										</ul>
-									</div><div class="col-1-3">
-										<h3 class="letter-title">A</h3>
-										<ul>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="ginekilog">Акушер-гинеколог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="allegrol">Аллерголог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="androlog">Андролог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="reanimatol">Анестезиолог-реаниматолог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="ginekolog">Акушер-гинеколог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="allegrol">Аллерголог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="allegrol1">Андролог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="anesteziolog">Анестезиолог-реаниматолог</label>
-											</li>
-										</ul>
-										<h3 class="letter-title">B</h3>
-										<ul>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="venerolog">Венеролог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="vertebrolog">Вертебролог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="veneros">Венеролог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="vertebro">Вертебролог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="veneroza">Венеролог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="verteb">Вертебролог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="venerolog4">Венеролог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="vertr">Вертебролог</label>
-											</li>
-										</ul>
-									</div><div class="col-1-3">
-										<h3 class="letter-title">B</h3>
-										<ul>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="vwnwrol2">Венеролог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="vertebrolog2">Вертебролог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="allegrolww">Венеролог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="vertew2">Вертебролог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="venerol3">Венеролог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="verteeebllog">Вертебролог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="vene">Венеролог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="verteb2">Вертебролог</label>
-											</li>
-										</ul>
-										<h3 class="letter-title">A</h3>
-										<ul>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="akysher">Акушер-гинеколог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="allegrol2">Аллерголог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="alndrolog">Андролог</label>
-											</li>
-											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="aneste">Анестезиолог-реаниматолог</label>
-											</li>
-										</ul>
-									</div>
+							<div class="dialog-window-content">
+								<div class="select-diagnostic">
+								<ul>
+									<li class="list-item1">
+										<input type="checkbox" name="" id="dignostic-1">
+										<label for="dignostic-1">РомиТаль (RomiTal), центр лазерной эстетики:</label>
+										<div class="right-cell">
+											<div class="price">225грн</div>
+										</div>
+									</li>
+									<li class="list-item1"> 
+										<input type="checkbox" name="" id="dignostic-1">
+										<label for="dignostic-1">Адонис, медицинская группа компаний:</label>
+										<div class="right-cell">
+											<div class="price">225грн</div>
+										</div>
+									</li>
+									<li class="list-item1"> 
+										<input type="checkbox" name="" id="dignostic-1">
+										<label for="dignostic-1">Клиника Гармония:</label>
+										<div class="right-cell">
+											<div class="price">225грн</div>
+										</div>
+									</li>
+									<li class="list-item1">
+										<input type="checkbox" name="" id="dignostic-1">
+										<label for="dignostic-1">Эл.Эн.:</label>
+										<div class="right-cell">
+											<div class="price">225грн</div>
+										</div>
+									</li>
+								</ul>
+								<p>РомиТаль:  Если после консультации проводится процедура - консультация врача бесплатна.</p>
 								</div>
-							</div>
-							<div class="dialog-footer">
-								<a href="#" class="modal-button btn-green" data-apply-select>Ок</a>
-								<a href="#" class="modal-button btn-dark btn-small" data-clear-select>Очистить выбор</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
         </section>
 	   <div class="hidden">
 			<div id="close-dialog">
