@@ -48,9 +48,9 @@
 									<div class="side-section-main">
 										<div class="side-section-header side-section-after">
 											<h3>Специализация врача</h3>
-											<a href="#" class="modal-button btn-border btn-full js-btn-open">Измените специальность</a>
+											<a href="#" class="modal-button btn-border btn-full js-btn-open js-btn-text">Выберете специальность</a>
 											<div class="side-section__main">
-												<div class="side-section_item"></div>
+												<div class="side-section_item section-doctors"></div>
 											</div>
 										</div>
 										<div class="side-section-content">
@@ -71,9 +71,9 @@
 									<div class="side-section-main">
 										<div class="side-section-header">
 											<h3>Район</h3>
-											<a href="#" class="modal-button btn-border btn-full" data-dialog="district">Выберите район</a>
+											<a href="#" class="modal-button btn-border btn-full js-btn-text__disrtict" data-dialog="district">Выберите район</a>
 											<div class="side-section__main">
-												<div class="side-section_item"></div>
+												<div class="side-section_item section-district"></div>
 											</div>
 										</div>
 										<div class="side-section-content">
@@ -276,22 +276,23 @@
 									<div class="col-1-3">
 										<dl class="select-parents">
 											<dt class="list-item">
-												<input type="checkbox" name="" id="dq">
-												<label for="dq" class="js-head-district" data-name="goloseevo">Голосеевский район</label>
+												<input type="checkbox" name="" id="d1">
+												<label for="d1" class="js-head-district" data-name="goloseevo">Голосеевский район</label>
 											</dt>
 											<dd>
 												<ul class="district-list js-in-district">
 													<li class="list-item">
-														<input type="checkbox" name="" id="">
-														<label for="" data-name="bagr">Багриновая гора</label>
+														<input type="checkbox" name="" id="district-1-1">
+														<label for="district-1-1" data-name="bagr">Багриновая гора</label>
 													</li>
 													<li class="list-item">
-														<input type="checkbox" name="" id="">
-														<label for="" data-name="goloseev" >Голосеево</label>
+														<input type="checkbox" name="" id="district-1-2">
+														<label for="district-1-2" data-name="goloseev" >Голосеево</label>
 													</li>
 													<li class="list-item">
-														<input type="checkbox" name="" id="">
-														<label for="" data-name="golos" >Голосеевский</label>
+														<input type="checkbox" name="" id="district-1-3">
+														<label for="district-1-1
+														3" data-name="golos" >Голосеевский</label>
 													</li>
 													<li class="list-item"><input type="checkbox" name="" id=""><label for="" data-name="demeev">Демеевка</label></li>
 													<li class="list-item"><input type="checkbox" name="" id=""><label for="" data-name="dobriu">Добрый путь</label></li>
@@ -318,7 +319,7 @@
 												<label for="d" class="js-head-district" data-name="goloseevoqq">Голосеевский район</label>
 											</dt>
 											<dd>
-												<ul class="district-list">
+												<ul class="district-list js-in-district2">
 													<li class="list-item"><input type="checkbox" name="" id=""><label for="" data-name="gora">Багриновая гора</label></li>
 													<li class="list-item"><input type="checkbox" name="" id=""><label for="" data-name="gol">Голосеево</label></li>
 													<li class="list-item"><input type="checkbox" name="" id=""><label for="" data-name="goloss">Голосеевский</label></li>
@@ -401,40 +402,40 @@
 								</div>
 							</div>
 							<div class="dialog-footer">
-								<a href="#" class="modal-button btn-green" data-apply-select>Ок</a>
-								<a href="#" class="modal-button btn-dark btn-small" data-clear-select>Очистить выбор</a>
+								<a href="#" class="modal-button btn-green js-btn-copy__dictrict" data-apply-select>Ок</a>
+								<a href="#" class="modal-button btn-dark btn-small js-btn-clear" >Очистить выбор</a>
 							</div>
 						</div>
 
 						<div id="dialog-window" class="js-doctors" data-block="js-doctor-text">
 							<div class="dialog-close"></div>
-							<div class="dialog-window-content">
+							<div class="dialog-window-content dialog-window__special">
 							<div class="select-specialization">
 									<div class="col-1-3">
 										<h3 class="letter-title">A</h3>
 										<ul>
 											<li class="list-item">
-												<input type="radio" name="" id="">
+												<input type="radio" name="" id="radio-1">
 												<label for="radio-1" data-name="akysher">Акушер-гинеколог!</label>
 											</li>
 											<li class="list-item">
-												<input type="radio" name="radio-var" id="">
+												<input type="radio" name="radio-var" id="radio-2">
 												<label for="radio-2" data-name="allegrolog">Аллерголог</label>
 											</li>
 											<li class="list-item">
-												<input type="radio" name="radio-var" id="">
+												<input type="radio" name="radio-var" id="radio-3">
 												<label for="radio-3" data-name="androlog">Андролог</label>
 											</li>
 											<li class="list-item">
-												<input type="radio" name="radio-var" id="">
+												<input type="radio" name="radio-var" id="radio-4">
 												<label for="radio-4" data-name="reanim">Анестезиолог-реаниматолог</label>
 											</li>
 										</ul>
 										<h3 class="letter-title">B</h3>
 										<ul>
 											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="vener">Венеролог</label>
+												<input type="radio" name="" id="radio-5">
+												<label for="radio-5" data-name="vener">Венеролог</label>
 											</li>
 											<li class="list-item">
 												<input type="radio" name="" id="">
@@ -594,7 +595,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="dialog-footer">
+
+							<div class="dialog-footer dialog-footer__none">
 								<a href="#" class="modal-button btn-green" data-apply-select>Ок</a>
 								<a href="#" class="modal-button btn-dark btn-small" data-clear-select>Очистить выбор</a>
 							</div>

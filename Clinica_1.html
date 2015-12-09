@@ -44,9 +44,14 @@
 									<div class="side-section-main">
 										<div class="side-section-header section__radio">
 											<h3>Выберите филиал </h3>
-											<input type="radio" name="" id="radio1" class="modal-radio" ><label  for="radio1" class="this-text1">Добробут «Стационар для  взрослых» <span class="radio-text_hide1"> Поликлиника для взрослых</span></label>
-											<input type="radio" name="" id="radio2" class="modal-radio"><label for="radio2" class="this-text2">Добробут «Поликлиника для взрослых на Левом берегу. <span class="radio-text_hide2">Поликлиника для взрослых на»</span></label>
-											<input type="radio" name="" id="radio3" class="modal-radio"><label for="radio3" class="this-text3">Добробут «Стационар для  взрослых» <span class="radio-text_hide3">Поликлиника для взрослых</span></label>
+											<form >
+												<input type="radio" name="clinica" id="radio1" class="modal-radio" >
+												<label  for="radio1" class="this-text1">Добробут «Стационар для  взрослых» <span class="radio-text_hide1"> Поликлиника для взрослых</span></label>					
+												<input type="radio" name="clinica" id="radio2" class="modal-radio">
+												<label for="radio2" class="this-text2">Добробут «Поликлиника для взрослых на Левом берегу. <span class="radio-text_hide2">Поликлиника для взрослых на»</span></label>
+												<input type="radio" name="clinica" id="radio3" class="modal-radio">
+												<label for="radio3" class="this-text3">Добробут «Стационар для  взрослых» <span class="radio-text_hide3">Поликлиника для взрослых</span></label>
+											</form>
 										</div>
 									</div>
 								</div>
@@ -63,9 +68,12 @@
 									<div class="side-section-main">
 										<div class="side-section-header">
 											<h3>Специализация врача</h3>
-											<a href="#" class="modal-button btn-border btn-full" data-dialog="#specialization">Измените специальность</a>
+											<a href="#" class="modal-button btn-border btn-full js-btn-text " data-dialog="#specialization">Выберете специальность</a>
 											<div class="side-section__main">
-												<div class="side-section_item"></div>
+												<div class="side-section_item section-doctors">
+													<span></span>
+													
+												</div>
 											</div>
 										</div>
 										<div class="side-section-content">
@@ -73,13 +81,15 @@
 												<ul class="simple-list">
 													<li class="list-item">
 														<input type="checkbox" name="radio-var" id="radio-1_1" class="hidden">
-														<label for="radio-1_1">Акушер-гинеколог</label>
+														<label for="radio-1_sel1">Акушер-гинеколог</label>
 														<div class="remove-item"></div>
 													</li>
 												</ul>
 											</div>
 										</div>
+										
 									</div>
+									
 								</div>
 
 							</div>
@@ -113,7 +123,7 @@
 											<textarea name="" id="" cols="30" rows="10" class="modal-form-input" placeholder="Комментарий"></textarea>
 										</div>
 									</div>
-										<span class="js-content-hide">
+									<span class="js-content-hide">
 									<input type="checkbox" name="" id="checkbox-1" class="modal-checkbox"><label for="checkbox-1">Врач для ребенка</label>
 									<input type="checkbox" name="" id="checkbox-2" class="modal-checkbox" checked="checked"><label for="checkbox-2">Выезд на дом</label>
 									</span>
@@ -230,7 +240,7 @@
 								</div>
 							</div>
 						</form>
-						<div id="dialog-window" data-block="js-doctor-text">
+						<div id="dialog-window" class="window-doctors" data-block="js-doctor-text" >
 							<div class="dialog-close"></div>
 							<div class="dialog-window-content ">
 								<div class="select-specialization">
@@ -239,30 +249,30 @@
 										<ul>
 											<li class="list-item">
 												<input type="radio" name="radio-var" id="">
-												<label for="radio-1" data-name="gineco">Акушер-гинеколог!</label>
+												<label for="" data-name="gineco">Акушер-гинеколог!</label>
 											</li>
 											<li class="list-item">
 												<input type="radio" name="radio-var" id="">
-												<label for="radio-2" data-name="allergo">Аллерголог</label>
+												<label for="" data-name="allergo">Аллерголог</label>
 											</li>
 											<li class="list-item">
-												<input type="radio" name="radio-var" id="">
+												<input type="radio" name="radio-var" id="radio-3">
 												<label for="radio-3" data-name="andro">Андролог</label>
 											</li>
 											<li class="list-item">
-												<input type="radio" name="radio-var" id="">
+												<input type="radio" name="radio-var" id="radio-4">
 												<label for="radio-4" data-name="reanim">Анестезиолог-реаниматолог</label>
 											</li>
 										</ul>
 										<h3 class="letter-title">B</h3>
 										<ul>
 											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="vener">Венеролог</label>
+												<input type="radio" name="" id="radio-5">
+												<label for="radio-5" data-name="vener">Венеролог</label>
 											</li>
 											<li class="list-item">
-												<input type="radio" name="" id="">
-												<label for="" data-name="sdsd">Венеролог</label>
+												<input type="radio" name="" id="radio-6">
+												<label for="radio-6" data-name="sdsd">Венеролог</label>
 											</li>
 											<li class="list-item">
 												<input type="radio" name="" id="radio-7">

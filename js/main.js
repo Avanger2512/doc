@@ -30,6 +30,8 @@
 			console.log(set);
 		});
 
+		$('.picker__weekday').removeAttr('title');
+
 
 		// Time selected
 		var timeSelect = $('.modal-time');
@@ -145,67 +147,16 @@
 			modalWindow = $('.modal'),
 			section;
 
-		$('input[type=radio], input[type=checkbox]', dialogWindow).on('change', function(e) {
+		$('.list-item', dialogWindow).on('change', function(e) {
 			var self = $(this);
 
 			self.closest('.list-item').trigger('change-item', this);
 		});
 
-		$('.list-item').on('change-item', function(e, el){
-			var this_ = $(this);
-
-			if (!this_.hasClass('selected')){
-				this_.append('<div class="remove-item"/>');
-			}
-		});
-
-
-		$('.list-item', dialogWindow).on('change-item', function(e, el) {
-			var self = $(this),
-				input = self.find('input[type=radio], input[type=checkbox]');
-
-
-			$('input[name="'+ $(el).attr('name') +'"][type=radio]', dialogWindow).closest('.list-item').removeClass('selected').find('.remove-item').remove();
-
-			self.addClass('selected');
-
-		}).on('change-item', function( e, el ){
-			var self = $(this), isOneCheck = false;
-
-			if ( $(el).closest('.select-specialization').length > 0) {
-				dialogWindow.trigger('close-dialog');
-				$('.side-section-content', section).trigger('append-content', [$(el).closest('.list-item').clone(), 'simple-list']);
-				return false;
-			}
-
-			//if ( $( 'input[type=radio], input[type=checkbox]', dialogWindow ).is(':checked') && !isOneCheck ) {
-			//	isOneCheck = true;
-			//	dialogWindow.addClass('show-footer');
-			//	recalcScrollPaneHeight( $(this ), dialogScrollPane);
-			//}
-		});
-
-		$('.list-item', dialogWindow).on('click', function (){
-			$(this).addClass('selected');
+		$('[data-dialog]').on('click', function() {
+			var	$thiss = $('.list-item', dialogWindow);
 			dialogWindow.addClass('show-footer');
-			recalcScrollPaneHeight( $(this ), dialogScrollPane);
-
-		});
-
-		$('.list-item').on('click', function (){
-			$(this).addClass('selected');
-
-			if ($('.list-item', '.js-doctors').hasClass('selected')){
-				$('.js-doctors').removeClass('open');
-			};
-		});
-
-		$('.list-item', dialogWindow).on('remove-item-el', function(){
-			if ( $('input[type=radio]:checked, input[type=checkbox]:checked', dialogWindow).length == 0 ) {
-				dialogWindow.removeClass('show-footer');
-
-				recalcScrollPaneHeight( $(this ), dialogScrollPane);
-			}
+			recalcScrollPaneHeight( $thiss, dialogScrollPane);
 		});
 
 		$('.modal-left-side').on('remove-item-el', '.list-item', function(e) {
@@ -215,23 +166,6 @@
 			if ( $( '.list-item', itemConteiner).length == 1 ) {
 				itemConteiner.remove();
 			}
-		});
-
-
-		modalWindow.on('click', '.remove-item', function(e) {
-			e.preventDefault();
-
-			var self = $(this),
-				item = self.closest('.list-item');
-			if ( self.closest('.modal-left-side').length > 0 ) {
-				// Left side handlers
-				item.trigger('remove-item-el').remove();
-			} else  if ( self.closest('.dialog-window-content').length > 0 ) {
-				// modal dialog handlers
-				item.removeClass('selected').find('input').prop('checked', false).trigger('remove-item-el');
-				self.remove();
-			}
-
 		});
 
 		dialogWindow.on( 'footer-toggle', function(e, show) {
@@ -274,6 +208,7 @@
 			var showDialog = function() {
 				dialogWindow.css('top', dialofOffsetTop )
 				dialogWindow.addClass('open');
+				
 				$('.side-section-header', currentSection).addClass('open-dialog');
 
 				if ($('.js-doctors').hasClass('open')){
@@ -283,6 +218,7 @@
 				};
 
 				section = currentSection;
+
 			}
 
 			if ( 'undefined' !== typeof section) {
@@ -303,23 +239,15 @@
 			return false;
 		});
 
-		//$('[data-clear-select]', dialogWindow).on('click', function() {
-		//	$( '.remove-item', dialogWindow ).trigger('click');
-//
-		//	return false;
-		//});
-
-		//remove all selected
 		$('[data-clear-select]', dialogWindow).on('click', function() {
-			$( '.list-item', dialogWindow ).removeClass('selected');
+			$( '.remove-item', dialogWindow ).trigger('click');
 
 			return false;
 		});
 
-		$('[data-apply-select]').on('click', function() {
-			var list = $('.list-item.selected', dialogWindow);
+		$('[data-clear-select]', '.js-doctors').on('click', function() {
+			$( '.list-item' , '.js-doctors').removeClass('selected');
 
-			$('.side-section-content-inner', section).trigger('append-content', [list.clone()]);
 			return false;
 		});
 
@@ -393,6 +321,8 @@
 		});
 		// radio
 		$('#radio1').click( function () {
+			var $this = $(this),
+				$parents = $this.parents('.radio-item');
 			$('.this-text1').addClass('is-active_color');
 			$('.radio-text_hide1').addClass('is-active');
 		});
@@ -403,6 +333,10 @@
 		$('#radio3').click( function () {
 			$('.this-text3').addClass('is-active_color');
 			$('.radio-text_hide3').addClass('is-active');
+		});
+		$('#radio4').click( function () {
+			$('.this-text4').addClass('is-active_color');
+			$('.radio-text_hide4').addClass('is-active');
 		});
 
 
@@ -436,52 +370,6 @@
 			return false;
 		});
 
-		// clone label and scroll
-		$('.list-item label').on('click', function(){
-			var $parent = $('.' + $(this).parents('#dialog-window').data('block')),
-				$text = $parent.find('.side-section_item'),
-				$textJsp = $parent.find('.side-section_item .jspPane');
-
-			if ($text.height() >= 150) {
-				$text.addClass('is-height');
-			}
-
-			if($text.hasClass('is-height')) {
-				// $(this).clone().appendTo($textJsp);
-				$('<a href="#" class="item-close"></a>').appendTo($(this).clone().appendTo($textJsp));
-				$('#dialog-window').removeClass('open');
-				$('.side-section-header').removeClass('open-dialog');
-				setTimeout(function(){
-					var settings = {
-						showArrows: true,
-						autoReinitialise: true
-					};
-					var pane = $text
-					pane.jScrollPane(settings);
-					var contentPane = pane.data('jsp').getContentPane();
-					var i = 1;
-				}, 100);
-			}
-			else {
-				$text.removeClass('is-height');
-				$('<a href="#" class="item-close"></a>').appendTo($(this).clone().appendTo($text));
-				$('#dialog-window').removeClass('open');
-				$('.side-section-header').removeClass('open-dialog');
-			}
-			$('.side-section_item label').addClass('js-close-item');
-		});
-
-		//delete label
-		$('body').on('click', '.js-close-item', function(){
-			var $block = $('#dialog-window'),
-				data = $(this).data("name"),
-				$item = $block.find($('[data-name=\''+ data +'\']')),
-				$itemParent = $item.parents('.list-item');
-
-			$(this).remove();
-			$itemParent.removeClass('selected');
-		});
-
 
 		//second window
 		$('body').on('click', '.js-close-item', function(){
@@ -495,15 +383,19 @@
 
 		// open window-doctors
 		$('.js-btn-open').on('click', function (){
+			var	$this_ = $('.list-item', '.js-doctors');
+
+			recalcScrollPaneHeight( $this_, dialogScrollPane);
+			$('.js-doctors').addClass('show-footer');
 			$(this).addClass('btn-opacity');
 			$('.js-doctors').addClass('open');
 			$('.js-doctor-text').addClass('open-dialog_doctor');
-			
 
 			if ($('.js-district').hasClass('open')){
 				$('.js-district').removeClass('open');
 				$('.side-section-header').removeClass('open-dialog');
 			};
+
 		});
 
 		$('.dialog-close').on('click', function (){
@@ -512,19 +404,228 @@
 			$('.js-btn-open').removeClass('btn-opacity');
 		});
 
-		//disrticts select
-		$('dt.list-item').on('click', function(){
+
+		
+
+		//doctors 
+		$('.list-item label' , '.select-specialization').on('click', function (){
 			var $this = $(this),
-				parents = $this.parents('.select-parents'),
-				list_ = parents.find('.district-list').children(),
-				side_ = $('.side-section_item');
+				$parent_ = $('.' + $this.parents('#dialog-window').data('block')),
+				$text = $parent_.find('.side-section_item'),
+				$parent = $this.parents('.list-item'),
+				$parentChoose = $this.parents('.select-specialization');
 
-			list_.addClass('selected');
+			$($text).html('');
+			$parentChoose.find('.list-item').removeClass('selected');
+			$('.list-item input').removeAttr('checked');
+			$parent.addClass('selected'); 
+			$this.clone().appendTo($text);
+			$('<a href="#" class="item-close"></a>').appendTo('.side-section_item label');
+			$('.side-section_item label').addClass('js-close-item');
+			$('a.js-btn-text').text('Измените специальность');
 
-			$('.js-head-district', side_).on('click', function() {
-				list_.removeClass('selected');
-			});
+			if 	($parent.hasClass('selected')){
+				dialogWindow.removeClass('open');
+				$('.side-section-header').removeClass('open-dialog');
+				$('.js-doctors').removeClass('open');
+				$('.js-doctor-text').removeClass('open-dialog_doctor');
+				$('.js-btn-open').removeClass('btn-opacity');
+			};
 		});
 
+		$('.section-doctors').on('click', '.js-close-item', function (){
+			$('a.js-btn-text').text('Выберете специальность');
+		});
+
+		//delete label
+		$('body').on('click', '.js-close-item', function(){
+			var $block = $('#dialog-window'),
+				data = $(this).data("name"),
+				$item = $block.find($('[data-name=\''+ data +'\']')),
+				$itemParent = $item.parents('.list-item');
+			
+			$(this).remove();
+			$itemParent.removeClass('selected').find('.remove-item').remove();
+			dialogWindow.find('.list-item').children().removeClass('js-district-remove');
+			removeItem();
+		});
+
+
+		//usluga_vibor
+		$('.list-item label' , '.select-diagnostic').on('click', function() {
+			var $this = $(this),
+				$parent = $this.parents('.list-item');
+
+			$parent.addClass('selected');
+
+			if ($parent.hasClass('selected')){
+				$parent.append('<div class="remove-item"/>');
+			}
+		});
+
+		$('body').on('click', '.remove-item', function() {
+			var $this = $(this),
+				$thisParent = $this.closest($('.list-item'));
+				
+			$thisParent.removeClass('selected').find('.remove-item').remove();
+		});
+
+		$('[data-clear-select]').on('click', function() {
+			var $this = $('.remove-item', dialogWindow),
+				$itemParent = $this.parents('.list-item__diagnost'),
+				$Parent = $itemParent.parents('.list-item');
+
+			$this.remove();
+			$('.list-item').removeClass('selected');
+		});
+
+
+		$('.js-btn-copy' ).on('click', function() {
+			var list = $('.list-item.selected label', '.select-diagnostic'),
+				$parent = $('.' + $(this).parents('.window-diagnostic').data('block')),
+				text = $('.side-section_item'),
+				textJsp = $parent.find('.side-section_item .jspPane');
+		
+			if (text.hasClass('is-height')) {
+				textJsp.html('');
+				$('<a href="#" class="item-close"></a>').appendTo(list.clone().appendTo(textJsp));
+				$('#dialog-window').removeClass('open');
+				$('.side-section-header').removeClass('open-dialog');
+			}
+			
+			else {
+				text.html('');	
+				text.removeClass('is-height');
+				$('<a href="#" class="item-close"></a>').appendTo(list.clone().appendTo('.side-section_item'));
+				$('#dialog-window').removeClass('open');
+				$('.side-section-header').removeClass('open-dialog');
+			}
+
+			if (text.height() >= 150) {
+				text.addClass('is-height');
+			}
+
+			if (text.hasClass('is-height')) {
+				textJsp.html('');
+				$('<a href="#" class="item-close"></a>').appendTo(list.clone().appendTo(textJsp));
+				setTimeout(function(){
+					var settings = {
+						showArrows: true,
+						autoReinitialise: true
+					};
+					var pane = text
+					pane.jScrollPane(settings);
+					var contentPane = pane.data('jsp').getContentPane();
+				}, 10);
+			}
+
+			$('.side-section_item label').addClass('js-close-item');
+			$('a.js-btn-text1').text('Измените услугу'); 
+			
+		});
+
+
+		//district
+		$('.list-item label' , '.js-district').on('click', function() {
+			var $this = $(this),
+				$parent = $this.parents('.list-item');
+
+			$parent.addClass('selected');
+
+			if ($parent.hasClass('selected')){
+				$parent.append('<div class="remove-item"/>');
+			}
+		});
+
+
+		//disrticts select
+		$('dt.list-item').on('click', function(){
+			var this_ = $(this),
+				parents = this_.parents('.select-parents'),
+				list_ = parents.find('.list-item'),
+				item = $('.list-item').closest('.select-parents');
+
+			this_.find('label').addClass('is-main-disrtict');
+			parents.find('.district-list').find('.list-item label').addClass('js-district-remove');
+			
+			list_.addClass('selected');
+			list_.append('<div class="remove-item"/>');
+
+		});
+
+		function removeItem() {
+			$('.select-parents').each(function(){
+				var this_ = $(this),
+					district = this_.find('.is-main-disrtict'),
+					parent = district.parents('.list-item'),
+					listItem = parent.next('dd').find('.list-item');
+
+				if (!parent.hasClass('selected')){
+					listItem.removeClass('selected').find('.remove-item').remove();
+				}
+
+			});	
+		};
+
+		//copy disrtict
+		$('.js-btn-copy__dictrict' ).on('click', function() {
+			var list = $('.list-item.selected label', '.js-district'),
+				$parent_ = $('.' + list.parents('.js-district').data('block')),
+				text = $parent_.find('.side-section_item'), 
+				parent = list.parents('.list-item'),
+				textJsp = $parent_.find('.side-section_item .jspPane'),
+				dtList = $('dt.list-item');
+				
+			if (text.hasClass('is-height')) {
+				textJsp.html('');
+				$('<a href="#" class="item-close"></a>').appendTo(list.clone().appendTo(textJsp));
+				$('#dialog-window').removeClass('open');
+				$('.side-section-header').removeClass('open-dialog');
+			}
+			
+			else {
+				text.html('');	
+				text.removeClass('is-height');
+				$('<a href="#" class="item-close"></a>').appendTo(list.clone().appendTo(text));
+				$('#dialog-window').removeClass('open');
+				$('.side-section-header').removeClass('open-dialog');
+			}
+
+			if (text.height() >= 150) {
+				text.addClass('is-height');
+			}
+
+			if (text.hasClass('is-height')) {
+				textJsp.html('');
+				$('<a href="#" class="item-close"></a>').appendTo(list.clone().appendTo(textJsp));
+				setTimeout(function(){
+					var settings = {
+						showArrows: true,
+						autoReinitialise: true
+					};
+					var pane = text
+					pane.jScrollPane(settings);
+					var contentPane = pane.data('jsp').getContentPane();
+				}, 10);
+			}
+		
+			
+
+			$('.side-section_item label').addClass('js-close-item');
+			$('a.js-btn-text__disrtict').text('Измените раен');
+
+			if ($('.is-main-disrtict').length){
+			  text.find('.js-district-remove').remove();
+			}
+					
+		});
+
+		$('.js-btn-clear').on('click',  function() {
+			var thisis = $('.list-item', '.select-district' ),
+				itemParent = thisis.parents('.select-district');
+			
+			thisis.removeClass('selected').find('.remove-item').remove();
+			dialogWindow.find('.list-item').children().removeClass('js-district-remove');
+		});
 	});
 }(jQuery, document));

@@ -334,7 +334,7 @@
   .modal .modal-right-side .row, .modal form .row {
     margin-bottom: 0;
   }
-  .content-order_footer .row .  row-none .js-content-hide {
+  .content-order_footer .row .row-none .js-content-hide {
     padding: 0 18px 0 19px;
   }
   .content-order_footer h3 {
@@ -525,7 +525,7 @@
     width: 300px !important;
   }
   #dialog-window .col-1-3 .list-item.selected {
-    margin-right: 5px;
+    margin-right: 20px;
   }
   #dialog-window .select-district .col-1-3 .list-item.selected {
     margin-right: 20px;
