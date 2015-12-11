@@ -144,13 +144,13 @@
   position: absolute;
   left: 0;
   top: 0px;
-  width: 244px;
+  width: 242px;
   height: 100%;
   border-radius: 5px 0 0 3px;
   background: url(../img/left-side.jpg) no-repeat; }
 
 .modal .modal-right-side {
-  padding-left: 244px; }
+  padding-left: 242px; }
   .modal .modal-right-side .row {
     margin-bottom: 18px; }
 
@@ -446,7 +446,7 @@ input.modal-form-input {
   #modal-calendar_root .picker__footer {
     display: none; }
   #modal-calendar_root .picker__box {
-    padding: 12px 7px; }
+    padding: 12px 7px 11px 7px; }
   #modal-calendar_root .picker__header {
     font-size: 16px;
     line-height: 20px;
@@ -634,7 +634,8 @@ input.modal-form-input {
 
 .modal-time-footer {
   font-size: 15px;
-  line-height: 19px; }
+  line-height: 19px; 
+  padding-bottom: 1px;}
   .modal-time-footer label {
     margin: 0; }
 
@@ -1122,16 +1123,8 @@ button.btn-full {
 .record_icon-clinica {
   top: 24px;
 }
-
-.modal-header:after {
-  content: '';
-  width: 0;
-  height: 10px;
-  background-image: url(../img/tab-open.png);
-  position: absolute;
-  right: 18px;
-  top: 50%;
-  cursor: pointer;
+.close-popup {
+  display: none;
 }
 .tab-close {
   display: none;
@@ -1346,6 +1339,54 @@ button.btn-full {
   display: none;
 }
 
+
+/*validation errors  */
+.input-validatiom {
+  position: relative;
+}
+  .input-validation__border {
+    border: 1px solid #e74a37;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .input-validation__message {
+   position: absolute;
+   height: 18px;
+   width: 99.9%;
+   background-color: #e74a37;
+   border-bottom-left-radius: 4px;
+   border-bottom-right-radius: 4px;
+   color: white;
+   text-align: center;
+   font-size: 13px;
+   font-weight: 400;
+  }
+  .input-validation__date {
+    height: 23px;
+    margin-left: -1px;
+    line-height: 23px;
+    width: 100.7%;
+  }
+  .input-validation__time {
+    bottom: -23px;
+    left: 0;
+    height: 23px;
+    width: 100.7%;
+    margin-left: -1px;
+    line-height: 23px;
+  }
+.modal-button.btn-validation__border {
+  border: 1px dashed #e74a37;
+}
+.btn-validation__message {
+  left: 0;
+  bottom: -20px;
+  width: 100%;
+  height: 21px;
+  line-height: 21px;
+}
 
 
 

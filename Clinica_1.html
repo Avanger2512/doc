@@ -38,6 +38,7 @@
 									<img src="img/popup-logo.png" alt="" class="logo">
 									<h2>Запись на прием в клинику</h2>
 									<div class="modal-icon record_icon record_icon-clinica"></div>
+									<div class="close-popup js-close-window"></div>
 								</div>
 								<div class="side-section">
 									<div class="modal-icon icon-clinic"></div>
@@ -66,9 +67,12 @@
 								<div class="side-section js-doctor-text">
 									<div class="modal-icon icon-doc"></div>
 									<div class="side-section-main">
-										<div class="side-section-header">
+										<div class="side-section-header input-validatiom">
 											<h3>Специализация врача</h3>
-											<a href="#" class="modal-button btn-border btn-full js-btn-text " data-dialog="#specialization">Выберете специальность</a>
+
+											<a href="#" class="input-validation__border btn-validation__border modal-button  btn-border btn-full js-btn-text " data-dialog="#specialization">Выберете специальность</a>
+											<div class="input-validation__message btn-validation__message">Cпециальность не выбрана</div>
+											
 											<div class="side-section__main">
 												<div class="side-section_item section-doctors">
 													<span></span>
@@ -78,13 +82,7 @@
 										</div>
 										<div class="side-section-content">
 											<div class="side-section-content-inner">
-												<ul class="simple-list">
-													<li class="list-item">
-														<input type="checkbox" name="radio-var" id="radio-1_1" class="hidden">
-														<label for="radio-1_sel1">Акушер-гинеколог</label>
-														<div class="remove-item"></div>
-													</li>
-												</ul>
+												
 											</div>
 										</div>
 										
@@ -104,8 +102,11 @@
 										<div class="row row-none js-content-hide line-pad">
 										<div class="col-sm-6 col-sm_none">
 											<div class="row row-none">
-												<div class="col-sm-12 col-sm_none">
-													<input type="text" class="modal-form-input" placeholder="Имя, фамилия*">
+												<div class="col-sm-12 col-sm_none ">
+												<div class="input-validatiom" >
+													<input type="text" class="modal-form-input input-validation__border" placeholder="Имя, фамилия*">
+													<div class="input-validation__message">Заполните поле Имя, фамилия</div>
+												</div>
 												</div>
 											</div>
 											<div class="row row-none">
@@ -136,16 +137,18 @@
 												<div class="modal-icon icon-calendar"></div><h3 class="js-btn-cal">Желаемая дата приема</h3>
 												<div class="tab-close__calendar"></div>
 											</div>
-											<div class="modal-calendar">
-												<input type="text" name="" id="modal-calendar" aria-haspopup="false">
+											<div class="modal-calendar input-validatiom input-validation__border input-validation__border-date">
+												<input type="text" name="" id="modal-calendar" aria-haspopup="false" class="">
+												<div class="input-validation__message input-validation__date">Выберете дату</div>
 											</div>
 										</div>
-										<div class="col-sm-6 mobile-head col-sm_none">
-											<div class="modal-right-header mobile-border">
+										<div class="col-sm-6 mobile-head col-sm_none ">
+											<div class="modal-right-header mobile-border ">
 												<div class="modal-icon icon-clock"></div><h3 class="js-btn-time">Желаемое время приема</h3>
 												<div class="tab-close__time"></div>
+												
 											</div>
-											<div class="modal-time">
+											<div class="modal-time input-validatiom input-validation__border input-validation__border-time">
 												<table class="modal-time-header">
 													<tr>
 														<th><a href="#" data-group="1">Утро</a></th>
@@ -223,6 +226,7 @@
 												<div class="modal-time-footer">
 													<input type="checkbox" name="" id="checkbox-3" class="modal-checkbox free-time"><label for="checkbox-3">время неважно</label>
 												</div>
+												<div class="input-validation__message input-validation__time">Выберете время</div>
 											</div>
 										</div>
 									</div>

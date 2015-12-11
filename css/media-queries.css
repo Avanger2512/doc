@@ -185,6 +185,26 @@
   .open-dialog_doctor::after {
     display: none;
   }
+.close-popup {
+  display: block;
+  background-image: url(../img/close-popup.png);
+  position: absolute;
+  right: 17px;
+  top: 10px;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+.close-popup:hover {
+  background-image: url(../img/close-popup_hover.png);
+  position: absolute;
+}
+.btn-validation__message {
+  width: 170px;
+  left: auto;
+  right: 39%;
+}
+
 
 
 
@@ -234,10 +254,11 @@
     text-align: left;
   }
   textarea.modal-form-input {
-    height: 33px;
+    height: 97px;
     overflow: visible;
     padding-top: 5px;
     padding-bottom: 0;
+    margin-bottom: 0px;
   }
   .modal-form-footer p {
     margin-bottom: 20px;
@@ -262,7 +283,7 @@
     display: none;
   }
   .modal-calendar, .js-content-hide, .modal-time {
-    display: none;
+    display: block;
   }
   .clients_icon, .record_icon  {
     display: block;
@@ -274,10 +295,7 @@
     border-bottom: 1px solid #c5dde3;
     padding: 20px 0;
   }
-  .modal-header:after {
-    width: 18px;
-    top: 25px;
-  }
+  
   .tab-close, .tab-close__calendar,.tab-close__time  {
     display: block;
   }
@@ -306,6 +324,7 @@
     border: none;
     padding: 0;
     width: 100%;
+    max-width: 100%;
   }
    .section__radio label {
     width: 100%;
@@ -402,7 +421,7 @@
   }
 
   .modal-time {
-    margin-top: 18px;
+    padding-top: 18px;
   }
   .modal-time-groups {
     margin-bottom: 20px;}
@@ -582,6 +601,47 @@
   .modal-button {
     margin-bottom: -5px;
   }
+  .close-popup {
+    display: block;
+    background-image: url(../img/close-popup.png);
+    position: absolute;
+    right: 17px;
+    top: 10px;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+  }
+  .close-popup:hover {
+    background-image: url(../img/close-popup_hover.png);
+    position: absolute;
+  }
+  .input-validation__border {
+    border: 1px solid #e74a37;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+  
+  .input-validation__message {
+    top: 33px;
+    height: 20px;
+  }
+  .btn-validation__message {
+    top: auto;
+  }
+  .input-validation__date {
+    top: auto;
+    left: 0;
+    width: 100.55%;
+  }
+  .input-validation__time {
+    top: auto;
+    bottom: -20px;
+    width: 100.55%;
+  }
+
+
 
 }
 

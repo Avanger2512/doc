@@ -178,6 +178,11 @@
 			dialogWindow.trigger('close-dialog');
 		});
 
+
+		// $('.js-close-window').on('click', function() {
+		// 	dialogWindow.trigger('close-dialog');
+		// });
+
 		dialogWindow.on('close-dialog', function() {
 			var self = $(this);
 
@@ -628,4 +633,19 @@
 			dialogWindow.find('.list-item').children().removeClass('js-district-remove');
 		});
 	});
+
+	// close dialow window mobile
+	$('.js-close-window').on('click', function(e) {
+		e.preventDefault();
+		var self = $(this),
+			modal = self.closest('.modal').data('bs.modal');
+		modal['closeDialog'] = true;
+		modal.hide();
+		modal.$element.on('hidden.bs.modal', function() {
+			self.closest('#close-dialog').remove();
+		});
+	});
+
+
+
 }(jQuery, document));
