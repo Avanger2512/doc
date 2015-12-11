@@ -216,6 +216,12 @@
     overflow-y: auto;
     outline: none;
   }
+  .diagnostic-window__info  .jspContainer {
+    width: 100% !important;
+  }
+  .diagnostic-window__info  .jspPane {
+    width: 100% !important;
+  }
 
 
   }
