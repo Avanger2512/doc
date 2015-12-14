@@ -233,7 +233,7 @@ input.modal-form-input {
       content: " ";
       background: url(../img/sprites.png) no-repeat;
       position: absolute;
-      left: 0;
+      /*left: 0;*/
       top: 1px;
       width: 17px;
       height: 17px;
