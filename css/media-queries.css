@@ -449,8 +449,8 @@
     padding-left: 36%;
   }
   .modal-time-groups .modal-time-cell .modal-checkbox + label:before {
-    left: auto;
     right: 40px;
+    left: auto;
   }
   .modal-right-header {
     margin-bottom: 0;
@@ -705,10 +705,10 @@
     display: none;
   }
   .section-doctors label{
-    width: 85%;
+    width: 65%;
   }
   .section-district label {
-    width: 85%;
+    width: 65%;
   }
 
 
