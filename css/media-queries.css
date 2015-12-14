@@ -448,8 +448,11 @@
   .modal-time-groups .modal-time-cell label {
     padding-left: 36%;
   }
+  .modal-time-cell {
+    position: relative;
+  }
   .modal-time-groups .modal-time-cell .modal-checkbox + label:before {
-    /*left: auto;*/
+    left: auto;
     right: 40px !important;
   }
   .modal-right-header {
