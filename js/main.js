@@ -154,9 +154,11 @@
 		});
 
 		$('[data-dialog]').on('click', function() {
-			var	$thiss = $('.list-item', dialogWindow);
+			var	$thiss = $('.list-item', dialogWindow),
+				$this_ = $('.list-item1', dialogWindow);
 			dialogWindow.addClass('show-footer');
 			recalcScrollPaneHeight( $thiss, dialogScrollPane);
+			recalcScrollPaneHeight( $this_, dialogScrollPane);
 		});
 
 		$('.modal-left-side').on('remove-item-el', '.list-item', function(e) {
@@ -213,7 +215,7 @@
 			var showDialog = function() {
 				dialogWindow.css('top', dialofOffsetTop )
 				dialogWindow.addClass('open');
-				
+
 				$('.side-section-header', currentSection).addClass('open-dialog');
 
 				if ($('.js-doctors').hasClass('open')){
@@ -410,9 +412,9 @@
 		});
 
 
-		
 
-		//doctors 
+
+		//doctors
 		$('.list-item label' , '.select-specialization').on('click', function (){
 			var $this = $(this),
 				$parent_ = $('.' + $this.parents('#dialog-window').data('block')),
@@ -423,7 +425,7 @@
 			$($text).html('');
 			$parentChoose.find('.list-item').removeClass('selected');
 			$('.list-item input').removeAttr('checked');
-			$parent.addClass('selected'); 
+			$parent.addClass('selected');
 			$this.clone().appendTo($text);
 			$('<a href="#" class="item-close"></a>').appendTo('.side-section_item label');
 			$('.side-section_item label').addClass('js-close-item');
@@ -448,7 +450,7 @@
 				data = $(this).data("name"),
 				$item = $block.find($('[data-name=\''+ data +'\']')),
 				$itemParent = $item.parents('.list-item');
-			
+
 			$(this).remove();
 			$itemParent.removeClass('selected').find('.remove-item').remove();
 			dialogWindow.find('.list-item').children().removeClass('js-district-remove');
@@ -471,7 +473,7 @@
 		$('body').on('click', '.remove-item', function() {
 			var $this = $(this),
 				$thisParent = $this.closest($('.list-item'));
-				
+
 			$thisParent.removeClass('selected').find('.remove-item').remove();
 		});
 
@@ -490,16 +492,16 @@
 				$parent = $('.' + $(this).parents('.window-diagnostic').data('block')),
 				text = $('.side-section_item'),
 				textJsp = $parent.find('.side-section_item .jspPane');
-		
+
 			if (text.hasClass('is-height')) {
 				textJsp.html('');
 				$('<a href="#" class="item-close"></a>').appendTo(list.clone().appendTo(textJsp));
 				$('#dialog-window').removeClass('open');
 				$('.side-section-header').removeClass('open-dialog');
 			}
-			
+
 			else {
-				text.html('');	
+				text.html('');
 				text.removeClass('is-height');
 				$('<a href="#" class="item-close"></a>').appendTo(list.clone().appendTo('.side-section_item'));
 				$('#dialog-window').removeClass('open');
@@ -525,8 +527,8 @@
 			}
 
 			$('.side-section_item label').addClass('js-close-item');
-			$('a.js-btn-text1').text('Измените услугу'); 
-			
+			$('a.js-btn-text1').text('Измените услугу');
+
 		});
 
 
@@ -552,7 +554,7 @@
 
 			this_.find('label').addClass('is-main-disrtict');
 			parents.find('.district-list').find('.list-item label').addClass('js-district-remove');
-			
+
 			list_.addClass('selected');
 			list_.append('<div class="remove-item"/>');
 
@@ -569,27 +571,27 @@
 					listItem.removeClass('selected').find('.remove-item').remove();
 				}
 
-			});	
+			});
 		};
 
 		//copy disrtict
 		$('.js-btn-copy__dictrict' ).on('click', function() {
 			var list = $('.list-item.selected label', '.js-district'),
 				$parent_ = $('.' + list.parents('.js-district').data('block')),
-				text = $parent_.find('.side-section_item'), 
+				text = $parent_.find('.side-section_item'),
 				parent = list.parents('.list-item'),
 				textJsp = $parent_.find('.side-section_item .jspPane'),
 				dtList = $('dt.list-item');
-				
+
 			if (text.hasClass('is-height')) {
 				textJsp.html('');
 				$('<a href="#" class="item-close"></a>').appendTo(list.clone().appendTo(textJsp));
 				$('#dialog-window').removeClass('open');
 				$('.side-section-header').removeClass('open-dialog');
 			}
-			
+
 			else {
-				text.html('');	
+				text.html('');
 				text.removeClass('is-height');
 				$('<a href="#" class="item-close"></a>').appendTo(list.clone().appendTo(text));
 				$('#dialog-window').removeClass('open');
@@ -613,8 +615,8 @@
 					var contentPane = pane.data('jsp').getContentPane();
 				}, 10);
 			}
-		
-			
+
+
 
 			$('.side-section_item label').addClass('js-close-item');
 			$('a.js-btn-text__disrtict').text('Измените раен');
@@ -622,13 +624,13 @@
 			if ($('.is-main-disrtict').length){
 			  text.find('.js-district-remove').remove();
 			}
-					
+
 		});
 
 		$('.js-btn-clear').on('click',  function() {
 			var thisis = $('.list-item', '.select-district' ),
 				itemParent = thisis.parents('.select-district');
-			
+
 			thisis.removeClass('selected').find('.remove-item').remove();
 			dialogWindow.find('.list-item').children().removeClass('js-district-remove');
 		});

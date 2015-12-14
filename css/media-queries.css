@@ -75,6 +75,7 @@
     width: 25%;
     padding: 16px 8px;
   }
+
   .section__radio {
     padding-top: 0;
     margin-bottom: 10px;
@@ -98,7 +99,7 @@
     position: absolute;
     top: 8px;
     right: 7px;
-    background-image: url(../img/item-close_second.png);
+    background: url(../img/item-close_second.png) no-repeat;
   }
   .side-section_item label:hover .item-close {
     position: absolute;
@@ -222,6 +223,9 @@
   .diagnostic-window__info  .jspPane {
     width: 100% !important;
   }
+  #close-dialog {
+  display: none;
+}
 
 
   }
@@ -266,7 +270,7 @@
   .modal-left-side .modal-header {
     padding: 18px 40px 18px 60px;
     margin: 0;
-    min-height: auto;
+    min-height: 60px;
     text-align: left;
   }
   textarea.modal-form-input {
@@ -311,7 +315,7 @@
     border-bottom: 1px solid #c5dde3;
     padding: 20px 0;
   }
-  
+
   .tab-close, .tab-close__calendar,.tab-close__time  {
     display: block;
   }
@@ -334,7 +338,7 @@
   .modal-time-footer {
     position: absolute;
     bottom: 5%;
-    left: 41%;
+    left: 39%;
   }
   .modal-time, .picker__holder {
     border: none;
@@ -441,6 +445,13 @@
   }
   .modal-time-groups {
     margin-bottom: 20px;}
+  .modal-time-groups .modal-time-cell label {
+    padding-left: 36%;
+  }
+  .modal-time-groups .modal-time-cell .modal-checkbox + label:before {
+    left: auto;
+    right: 40px;
+  }
   .modal-right-header {
     margin-bottom: 0;
   }
@@ -533,7 +544,7 @@
 
   /* tooltip */
   #dialog-window .jspVerticalBar {
-    right: 12px;
+    right: 13px;
   }
   #dialog-window.open {
     width: 100%;
@@ -548,15 +559,16 @@
     max-height: 400px;
   }
 
-  .diagnostic-window__info .dialog-window-content {
+
+  .diagnostic-window__info .dialog-window-content .select-diagnostic{
     padding-right: 20px !important;
   }
-  .diagnostic-window__info  .jspContainer {
+ /* .diagnostic-window__info  .jspContainer {
     width: 100% !important;
   }
   .diagnostic-window__info  .jspPane {
     width: 100% !important;
-  }
+  }*/
   .side-section_item .jspPane {
     width: 228px !important;
   }
@@ -670,7 +682,7 @@
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
 }
-  
+
   .input-validation__message {
     top: 33px;
     height: 20px;
@@ -688,6 +700,17 @@
     bottom: -20px;
     width: 100.55%;
   }
+
+  #close-dialog {
+    display: none;
+  }
+  .section-doctors label{
+    width: 85%;
+  }
+  .section-district label {
+    width: 85%;
+  }
+
 
 
 
