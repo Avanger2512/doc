@@ -82,7 +82,7 @@
   }
   #dialog-window.open {
     left: 55px;
-    top: 331px !important;
+    top: 0 !important;
     border-radius: 5px;
   }
   .side-section-header.open-dialog::after {
@@ -227,6 +227,7 @@
   }
   .modal-button {
     overflow: visible;
+    text-overflow: clip;
   }
 
   }
@@ -355,11 +356,11 @@
     width: 109%;
     margin-left: -4%;
    }
-   #dialog-window.open {
+   /*#dialog-window.open {
     left: 0px;
     top: 168px;
     border-radius: 5px;
-  }
+  }*/
   .side-section-header.open-dialog::after {
     display: none;
   }
