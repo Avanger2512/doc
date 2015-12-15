@@ -1345,6 +1345,7 @@ button.btn-full {
 }
 
 .diagnostic-window__info .dialog-window-content {
+  height: 270px !important;
   min-height: 200px;
   height: auto;
 }

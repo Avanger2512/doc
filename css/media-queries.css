@@ -47,9 +47,9 @@
   .side-section-header .btn-border {
     position: absolute;
     top: 0;
-    right: 39%;
+    left: 140px;
     display: inline-block;
-    width: 170px;
+    width: 180px;
     margin-left: 15px;
   }
   .side-section-header h3 {
@@ -204,9 +204,8 @@
   position: absolute;
 }
 .btn-validation__message {
-  width: 170px;
-  left: auto;
-  right: 39%;
+  width: 180px;
+  left: 155px;
 }
 .jspHorizontalBar {
     display: none;
@@ -225,8 +224,10 @@
   }
   #close-dialog {
   display: none;
-}
-
+  }
+  .modal-button {
+    overflow: visible;
+  }
 
   }
 
@@ -279,6 +280,7 @@
     padding-top: 5px;
     padding-bottom: 0;
     margin-bottom: 0px;
+    overflow: auto;
   }
   .modal-form-footer p {
     margin-bottom: 20px;
@@ -450,7 +452,7 @@
   }
   .modal-time-cell .modal-checkbox + label::before {
     left: auto;
-    right: 40px; 
+    right: 40px;
   }
   .modal-right-header {
     margin-bottom: 0;
@@ -548,7 +550,7 @@
   }
   #dialog-window.open {
     width: 100%;
-    top: 373px !important;
+    top: 0 !important;
     padding: 23px 0px 40px 10px;
   }
   #dialog-window .col-1-3 {
@@ -558,7 +560,9 @@
     /*width: 100% !important;*/
     max-height: 400px;
   }
-
+  .diagnostic-window__info .dialog-window-content {
+    height: 270px !important;
+  }
 
   .diagnostic-window__info .dialog-window-content .select-diagnostic{
     padding-right: 20px !important;

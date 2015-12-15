@@ -557,7 +557,10 @@
 
 			list_.addClass('selected');
 			list_.append('<div class="remove-item"/>');
+		});
 
+		$('body').on('click', 'dt.list-item.selected', function() {
+			removeItem()
 		});
 
 		function removeItem() {
@@ -619,7 +622,7 @@
 
 
 			$('.side-section_item label').addClass('js-close-item');
-			$('a.js-btn-text__disrtict').text('Измените раен');
+			$('a.js-btn-text__disrtict').text('Измените район');
 
 			if ($('.is-main-disrtict').length){
 			  text.find('.js-district-remove').remove();
